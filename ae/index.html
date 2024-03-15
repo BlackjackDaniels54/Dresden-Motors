@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dresden Motors - Best car dealer </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../en/" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/../en/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/../en/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- ../en/libraries Stylesheet -->
+    <link href="../en/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../en/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../en/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../en/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../en/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-car me-3"></i>Dresden Motors</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a  data-scroll-to="#home" class="nav-item nav-link active">Home</a>
+                <a  data-scroll-to="#about" class="nav-item nav-link">About</a>
+                <a  data-scroll-to="#contact" class="nav-item nav-link">Contact</a>
+                <a  data-scroll-to="#dealers" class="nav-item nav-link">dealers</a>
+                <a  data-scroll-to="#comments" class="nav-item nav-link">comments</a>
+            </div>
+            
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div id="home" class="container-fluid p-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="../en/img/carousel-bg-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                                <div class="col-10 col-lg-7 text-center text-lg-start">
+                                   
+                                    <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">Unlock new roads! <br>Buy your dream car today</h1>
+                                    <a data-scroll-to="#about" class="btn btn-primary py-3 px-5 animated slideInDown">Learn More<i class="fa fa-arrow-right ms-3"></i></a>
+                                </div>
+                                <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
+                                    <img class="img-fluid" src="../en/img/carousel-1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="../en/img/carousel-bg-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                                <div class="col-10 col-lg-7 text-center text-lg-start">
+                                    <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">Sell smarter, drive better! <br> Your trusted partner in car sales.</h1>
+                                    <a data-scroll-to="#about" class="btn btn-primary py-3 px-5 animated slideInDown">Learn More<i class="fa fa-arrow-right ms-3"></i></a>
+                                </div>
+                                <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
+                                    <img class="img-fluid" src="../en/img/carousel-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex py-5 px-4">
+                        <i class="fa fa-certificate fa-3x text-primary flex-shrink-0"></i>
+                        <div class="ps-4">
+                            <h5 class="mb-3">Quality Servicing</h5>
+                            <p>Excellence and expertise for all your automotive needs.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="d-flex bg-light py-5 px-4">
+                        <i class="fa fa-users-cog fa-3x text-primary flex-shrink-0"></i>
+                        <div class="ps-4">
+                            <h5 class="mb-3">Expert Dealers</h5>
+                            <p>Your trusted source for automotive excellence.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="d-flex py-5 px-4">
+                        <i class="fa-solid fa-car fa-3x text-primary flex-shrink-0"></i>
+                        <div class="ps-4">
+                            <h5 class="mb-3">Best Propositions</h5>
+                            <p>Unbeatable offers for your automotive needs.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Car deals Start-->
+
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-primary text-uppercase">Featured Car Deals</h6>
+                <h1 class="mb-5">Best Car Deals!</h1>
+            </div>
+            <div id="deal-cars-container" class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="../en/img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Car deals End-->
+
+
+
+
+    <!-- About Start -->
+    <div id="about" class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 pt-4" style="min-height: 400px;">
+                    <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
+                        <img class="position-absolute img-fluid w-100 h-100" src="../en/img/about.jpg" style="object-fit: cover;" alt="">
+                        <div class="position-absolute top-0 end-0 mt-n4 me-n4 py-4 px-5" style="background: rgba(0, 0, 0, .08);">
+                            <h1 class="display-4 text-white mb-0">21 <span class="fs-4">Years</span></h1>
+                            <h4 class="text-white">Experience</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="text-primary text-uppercase">About Us</h6>
+                    <h1 class="mb-4"><span class="text-primary">Dresden Motors</span> Is The Best Place For Your Auto Deal</h1>
+                    <p class="mb-4">Welcome to Dresden Motors, Dubai! 
+                        Looking for new or pre-owned luxury cars for sale in Dubai at the best prices? You will find great deals on exotic and super cars here at Dresden Motors, one of Dubai's best luxury car dealerships.</p>
+                    <div class="row g-4 mb-3 pb-3">
+                        <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="d-flex">
+                                <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                    <span class="fw-bold text-secondary">01</span>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>Quality & Diversity </h6>
+                                    <span>Dresden Motors boasts a diverse inventory of new and pre-owned luxury cars, including brands such as Mercedes-Benz, Rolls Royce, and Lexus.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="d-flex">
+                                <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                    <span class="fw-bold text-secondary">02</span>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>World Famous</h6>
+                                    <span>Established in 2003, Dresden Motors is renowned as one of Dubai's top luxury car dealerships, offering great deals and a world-class customer experience.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="d-flex">
+                                <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                    <span class="fw-bold text-secondary">03</span>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>Exceptional Service & Accessibility</h6>
+                                    <span>With three locations across the United Arab Emirates, Dresden Motors serves customers worldwide, providing exceptional service and accessibility.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Fact Start -->
+    <div class="container-fluid fact bg-dark my-5 py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <i class="fa fa-check fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">21</h2>
+                    <p class="text-white mb-0">Years Experience</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">200</h2>
+                    <p class="text-white mb-0">Expert Dealers</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-users fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">1454</h2>
+                    <p class="text-white mb-0">Satisfied Clients</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <i class="fa fa-car fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">2143</h2>
+                    <p class="text-white mb-0">Compleate Projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact End -->
+
+
+    <!-- Service Start -->
+    <div id="contact" class="container-xxl service py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-3">What are you looking for ?</h1>
+                <h6 class="text-primary text-uppercase mb-5">Best car deals</h6>
+                
+            </div>
+            <div class="row justify-content-between g-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-5 d-flex justify-content-center">
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn d-flex p-4 flex-column align-items-center" data-show-modal="go-to-modal">
+                        <div class="car-icon-container car-buy">
+                            <img src="../en/img/icons/Sell_Car.svg" alt="">
+                        </div>
+                        <h1 class="my-3">Car Buy</h1>
+                        <div>We can assist you in purchasing the best-used car and save you time. Please click here.</div>
+                    </button>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="col-lg-5 d-flex justify-content-center">
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn d-flex p-4 flex-column align-items-center" data-show-modal="go-to-modal">
+                        <div class="car-icon-container car-sell">
+                            <img src="../en/img/icons/Buy_Car.svg" alt="">
+                        </div>
+                            <h1 class="my-3">Car Sell</h1> 
+                            <div>Interested in selling your car? Click here and complete the details form.</div>
+                        </div>  
+                    </button>
+                </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Booking Start -->
+    <div class="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-6 py-5">
+                    <div class="py-5">
+                        <h1 class="text-white mb-4">Certified and Award Winning Car Repair Service Provider</h1>
+                        <p class="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
+                        <h1 class="text-white mb-4">Leave A Request</h1>
+                        <form id="main-form">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" name="FirstName" placeholder="First Name" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" name="LastName" placeholder="Last Name" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" class="form-control border-0" name="email" placeholder="Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" name="phone" placeholder="Phone" style="height: 55px;">
+                                </div>
+                                <div class="col-12 w-100">  
+                                    <a class="downloadLink main-page p-3 w-100" href="js/language.js" download>Download your personal coupon!</a>
+                                </div>
+                                <div class="col-12">
+                                    <button class="submit-dres-form btn btn-secondary w-100 py-3" type="submit">send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Booking End -->
+
+
+    <!-- Team Start -->
+    <div id="dealers" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="text-primary text-uppercase mb-5">Our Best Car Dealers</h6>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="../en/img/team-5.jpg" alt="">
+                            
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h5 class="fw-bold mb-0">Max Wheeler</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="../en/img/team-6.jpg" alt="">
+                            
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h5 class="fw-bold mb-0">Jack Gearman</h5>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="../en/img/team-3.jpg" alt="">
+                            
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h5 class="fw-bold mb-0">Robert Brown</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="../en/img/team-4.jpg" alt="">
+                            
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h5 class="fw-bold mb-0">Marcus Autoberg</h5>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div id="comments" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="mb-5">Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="../en/img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Sophia Rodriguez</h5>
+                    <p>New client</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">The service was great. Honest polite staff and good communication. Possible to contact if have questions true WhatsUp.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="../en/img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">James Reynolds</h5>
+                    <p>New client</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Their selection of vehicles is top-notch, and the staff is incredibly knowledgeable about each model. I found my dream car here.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="../en/img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Benjamin Carter</h5>
+                    <p>Regular client</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Highly recommend for hassle-free car buying!</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="../en/img/testimonial-7.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Emily Patel</h5>
+                    <p>Regular client</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Excellent platform for specialized truck trading! 5+ years of seamless cooperation!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Opening Hours</h4>
+                    <h6 class="text-light">Monday - Friday:</h6>
+                    <p class="mb-4">09.00 AM - 09.00 PM</p>
+                    <h6 class="text-light">Saturday - Sunday:</h6>
+                    <p class="mb-0">09.00 AM - 12.00 PM</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Services</h4>
+                    <a class="btn btn-link" href="">Diagnostic Test</a>
+                    <a class="btn btn-link" href="">Engine Servicing</a>
+                    <a class="btn btn-link" href="">Tires Replacement</a>
+                    <a class="btn btn-link" href="">Oil Changing</a>
+                    <a class="btn btn-link" href="">Vacuam Cleaning</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Modal Start-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div style="border: none;" class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title text-uppercase text-center mb-3" id="exampleModalLabel">
+                    Fill out the form and download the promo coupon
+                </h4>
+                <form id="modal-form" action="">
+                    <div class="form-floating mb-3">
+                        <input type="email" name="FirstName" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">First Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="LastName" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Last Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="phone" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Phone number</label>
+                    </div>
+                    <div class="text-center"> 
+                            <a class="downloadLink" href="js/language.js" download>Download your personal coupon!</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="submit-modal-dres-form InActive btn btn-primary w-100">Send</button>
+              <button class="btn btn-primary loading-spinner-btn w-100" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--Modal End-->
+
+
+    <!-- Toast Success Start-->
+
+    <div id="MainToastContainer" class="p-3" style="z-index: 999999">
+            <div id="MainToast" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                <div class="toast-body">
+                    
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+    </div>
+    
+    <!-- Toast Success End-->
+
+    
+
+    <!-- JavaScript ../en/libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../en/lib/wow/wow.min.js"></script>
+    <script src="../en/lib/easing/easing.min.js"></script>
+    <script src="../en/lib/waypoints/waypoints.min.js"></script>
+    <script src="../en/lib/counterup/counterup.min.js"></script>
+    <script src="../en/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../en/lib/tempusdominus/js/moment.min.js"></script>
+    
+    <script src="../en/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../en/js/main.js"></script>
+</body>
+
+</html>

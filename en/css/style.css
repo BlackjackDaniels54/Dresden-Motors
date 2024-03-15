@@ -6,7 +6,9 @@
     --dark: #111111;
     
 }
-
+a:hover {
+    cursor: pointer;
+}
 button {
     background-color: transparent;
     outline: none;
@@ -42,6 +44,31 @@ button:focus {
 }
 
 
+#MainToastContainer {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.submit-modal-dres-form {
+    display: none !important;
+    transition: all 0.1s ease;
+}
+
+.submit-modal-dres-form.InActive {
+    display: block !important;
+}
+
+.loading-spinner-btn {
+    display: none !important;
+    transition: all 0.1s ease;
+}
+
+.loading-spinner-btn.InActive {
+    display: block !important;
+}
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -296,14 +323,11 @@ button:focus {
 
 .downloadLink.main-page {
     color: var(--secondary);
-    transition: all .3s ease-in-out ;
-}
-.main-page-file-download {
+    background-color: #fff;
     display: inline-block;
-    background-color: #FFF;
-    transition: all .3s ease-in-out ;
-    
+    transition: all .2s ease-in-out ;
 }
+
 
 
 
@@ -448,11 +472,8 @@ button:focus {
         background-color: rgba(11, 33, 84, 0.05);
         border-radius: 1rem;
     }
-    .main-page-file-download:hover {
-        background-color: var(--secondary);
-
-    }
     .downloadLink.main-page:hover {
+        background-color: var(--secondary);
         color: var(--primary);
     }
 }

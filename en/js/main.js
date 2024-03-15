@@ -2,8 +2,6 @@
     "use strict";
     //Cars Data
 
-    var myToast = new bootstrap.Toast(document.getElementById('myToast'));
-  myToast.show();
     const CarsContainer = document.querySelector('#deal-cars-container');
 
     function CarsData () {
@@ -81,8 +79,7 @@
                 <img class="" src="${car.imgSrc}" >
             </div>
             
-            <h5 class="mb-0">${car.price}</h5>
-            <p>${car.year}</p>
+            <h5 class="my-3">${car.year}</h5>
             <div class="testimonial-text bg-light text-center p-4">
             <p class="mb-0">${car.description}</p>
             </div>
@@ -101,7 +98,9 @@
     };
     spinner();
     
-    
+
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -115,14 +114,63 @@
         }
     });
     
+    // Active Links
 
+    function scrollToSection(event) {
+        event.preventDefault();  // Предотвращаем стандартное действие ссылки
+        arrOflinks.forEach(link => link.classList.remove('active'));
+        event.target.classList.add('active');
+        const targetId = event.target.getAttribute('data-scroll-to'); // Получаем ID целевой секции из атрибута href ссылки
+        const targetSection = document.querySelector(targetId); // Находим целевую секцию по ID
+        const headerHeight = document.querySelector('.navbar').offsetHeight; // Получаем высоту header'а
+        const targetOffset = targetSection.offsetTop - headerHeight; // Вычисляем вертикальное смещение до секции с учетом высоты header'а
+        window.scrollTo({
+            top: targetOffset,
+            behavior: 'smooth' // Плавная прокрутка
+        });
+    }
+
+    // Навешиваем обработчик события на все ссылки в навигации
+    const arrOflinks = document.querySelectorAll('[data-scroll-to]');
+    console.log(arrOflinks);
+    arrOflinks.forEach(link => {
+        link.addEventListener('click', scrollToSection);
+    });
 
     // Handle submit 
+
+    let IsDownloaded = false;
+    let IsErrorPost = false;
+
+    function ShowToast(message) {
+        let ToastBlock = document.getElementById('MainToast');
+        const createToast = new bootstrap.Toast(ToastBlock);
+
+        let BODY = ToastBlock.querySelector('.toast-body');
+
+        ['bg-success', 'bg-danger'].forEach(className => {
+            ToastBlock.classList.remove(className);
+        })
+
+        
+        BODY.innerHTML = message;
+        !IsErrorPost ? ToastBlock.classList.add('bg-danger') : ToastBlock.classList.add('bg-success');
+        createToast.show();
+    }
+
+    function ShowSpinner() {
+        const loadingBtn = document.querySelector('.loading-spinner-btn'),
+              currentBtn = document.querySelector('.submit-modal-dres-form');
+        loadingBtn.classList.toggle('InActive');
+        currentBtn.classList.toggle('InActive');
+    }
+
     const SubmitBtn = document.querySelector('.submit-dres-form');
     const ModalSubmitBtn = document.querySelector('.submit-modal-dres-form');
     const promoFiles = document.querySelectorAll('.downloadLink');
 
-    let IsDownloaded = false;
+    
+
 
     console.log(IsDownloaded);
     promoFiles.forEach(file => file.addEventListener('click', () => {
@@ -136,7 +184,7 @@
         if(IsDownloaded) {
             handleSubmit(form);
         }else {
-            console.log("Download error");
+            ShowToast('Please, download your promo coupon!')
         }
     })
 
@@ -146,14 +194,13 @@
         if(IsDownloaded) {
             handleSubmit(form);
         }else {
-            console.log("Download error");
+            ShowToast('Please, download your promo coupon!');
         }
     })
 
     
     async function handleSubmit(form) {
-      
-      //var ThanksNotification = document.getElementById("my-form-status");
+     ShowSpinner();
       const data = {
             "First name": form.querySelector('input[name="FirstName"]').value,
             "Last name": form.querySelector('input[name="LastName"]').value,
@@ -181,19 +228,24 @@
         }
       }).then(response => {
         if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
+            IsErrorPost = true;
+          ShowToast("Your application has been successfully accepted! You'll be contacted ");
           form.reset()
         } else {
           response.json().then(data => {
+            
             if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                IsErrorPost = false;
+              ShowToast(data["errors"].map(error => error["message"]).join(", ")); 
             } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
+                ShowToast("Oops! There was a problem submitting your form"); 
             }
           })
         }
       }).catch(error => {
-            console.log(error);
+            ShowToast(error);
+      }).finally(res => {
+        ShowSpinner();
       });
     }
     
