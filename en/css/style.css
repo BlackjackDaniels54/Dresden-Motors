@@ -26,6 +26,15 @@ button:focus {
     outline: 0;
     box-shadow: 0 0 0 0.15rem rgba(11, 33, 84, 0.25);
 }
+.form-select {
+    border-color: transparent !important; 
+}
+
+.form-select:focus {
+    border-color: transparent !important; 
+    outline: 0; 
+    box-shadow: none;
+}
 
 .toast {
     background-color: #FFF;
@@ -49,8 +58,12 @@ button:focus {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-
+    z-index: -99999;
 }
+
+#MainToastContainer.active {
+    z-index: 99999;
+} 
 
 .submit-modal-dres-form {
     display: none !important;
@@ -464,7 +477,9 @@ button:focus {
     border-right: none;
 }
 
-
+.footer-mail-link:hover {
+    filter: brightness(0.8);
+}
 
 
 @media(hover:hover) {

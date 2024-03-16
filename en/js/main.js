@@ -143,10 +143,14 @@
     let IsErrorPost = false;
 
     function ShowToast(message) {
-        let ToastBlock = document.getElementById('MainToast');
+        let ToastBlock = document.getElementById('MainToast'),
+            ToastContainer = document.getElementById('MainToastContainer');
+
+        ToastContainer.classList.add('active');
         const createToast = new bootstrap.Toast(ToastBlock);
 
         let BODY = ToastBlock.querySelector('.toast-body');
+
 
         ['bg-success', 'bg-danger'].forEach(className => {
             ToastBlock.classList.remove(className);
@@ -156,6 +160,10 @@
         BODY.innerHTML = message;
         !IsErrorPost ? ToastBlock.classList.add('bg-danger') : ToastBlock.classList.add('bg-success');
         createToast.show();
+
+        setTimeout(function() {
+            ToastContainer.classList.remove('active');
+        }, 5500);
     }
 
     function ShowSpinner() {
@@ -278,6 +286,11 @@
     });
     
     
+    //Nav-to-page
+
+    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
